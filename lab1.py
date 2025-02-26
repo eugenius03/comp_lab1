@@ -45,7 +45,6 @@ for i in range(1,4*n+1):
     points[i] = [x1[i-1],y1[i-1]] 
 x = []
 y = []
-print(points[7],points[8])
 for i in points.keys():
     for j in points.keys():
         number = j - i
