@@ -19,22 +19,22 @@ x_coord = x1[0]
 y_coord = y1[0]
 i=0
 step=r/n
-while x_coord <r:
+for _ in range(n):
     x_coord=x1[i]+step
     x1.append(x_coord)
     y1.append(0)
     i+=1
-while y_coord <r:
+for _ in range(n):
     y_coord=y1[i]+step
     y1.append(y_coord)
     x1.append(r)
     i+=1
-while x_coord > 0:
+for _ in range(n):
     x_coord=x1[i]-step
     x1.append(x_coord)
     y1.append(r)
     i+=1
-while y_coord > 0:
+for _ in range(n):
     y_coord=y1[i]-step  
     y1.append(y_coord)
     x1.append(0)
