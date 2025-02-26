@@ -48,7 +48,7 @@ y = []
 for i in points.keys():
     for j in points.keys():
         number = j - i
-        if all(((number)%(4*n)>0, is_fibonacci(number))):
+        if all(((number)%(4*n)>0, is_fibonacci(number), points[i][0]!=points[j][0], points[i][1]!=points[j][1])):
             x.extend([points[i][0], points[j][0], None])
             y.extend([points[i][1], points[j][1], None])
 plt.plot(x1,y1, marker='o')
