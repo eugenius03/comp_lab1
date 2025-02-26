@@ -13,31 +13,31 @@ def is_fibonacci(n):
 r = int(input("Enter R: "))
 n = int(input("Enter N: "))
 
-x1 = [0]
-y1 = [0]
+x1 = np.array([0])
+y1 = np.array([0])
 x_coord = x1[0]
 y_coord = y1[0]
 i=0
 step=r/n
 for _ in range(n):
     x_coord=x1[i]+step
-    x1.append(x_coord)
-    y1.append(0)
+    x1 = np.append(x1,x_coord)
+    y1 = np.append(y1,0)
     i+=1
 for _ in range(n):
     y_coord=y1[i]+step
-    y1.append(y_coord)
-    x1.append(r)
+    y1 = np.append(y1,y_coord)
+    x1 = np.append(x1,r)
     i+=1
 for _ in range(n):
     x_coord=x1[i]-step
-    x1.append(x_coord)
-    y1.append(r)
+    x1 = np.append(x1,x_coord)
+    y1 = np.append(y1,r)
     i+=1
 for _ in range(n):
     y_coord=y1[i]-step  
-    y1.append(y_coord)
-    x1.append(0)
+    y1 = np.append(y1,y_coord)
+    x1 = np.append(x1,0)
     i+=1
 
 points = {}
