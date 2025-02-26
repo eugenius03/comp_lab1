@@ -27,17 +27,17 @@ for _ in range(n):
 for _ in range(n):
     y_coord=y1[i]+step
     y1 = np.append(y1,y_coord)
-    x1 = np.append(x1,r)
+    x1 = np.append(x1,x1[i])
     i+=1
 for _ in range(n):
     x_coord=x1[i]-step
     x1 = np.append(x1,x_coord)
-    y1 = np.append(y1,r)
+    y1 = np.append(y1,y1[i])
     i+=1
 for _ in range(n):
     y_coord=y1[i]-step  
     y1 = np.append(y1,y_coord)
-    x1 = np.append(x1,0)
+    x1 = np.append(x1,x1[i])
     i+=1
 
 points = {}
@@ -45,6 +45,7 @@ for i in range(1,4*n+1):
     points[i] = [x1[i-1],y1[i-1]] 
 x = []
 y = []
+print(points[7],points[8])
 for i in points.keys():
     for j in points.keys():
         number = j - i
